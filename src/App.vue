@@ -9,6 +9,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      sd: "ss",
+    };
+  },
+};
+</script>
+
 <style scoped>
 .logo {
   height: 6em;

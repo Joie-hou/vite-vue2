@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNEXT", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": [],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  // "files": [],
+  "include": ["vite", "vite.config.js", "src/**/*.js", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist"],
+}
