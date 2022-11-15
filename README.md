@@ -17,3 +17,8 @@ module.exports = {
 ```
 - 安装vue2.x
 `yarn add vue@2.x`
+
+- 还需要安装`vue-template-compiler`否则项目无法运行
+`yarn add vue-template-compiler`
+
+[注意] vue 和 vue-template-compiler 版本需要对应，否则运行报错
