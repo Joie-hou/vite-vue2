@@ -108,3 +108,61 @@ module.exports = {
   "recommendations": ["Vue.volar"]
 }
 ```
+
+# stylelint scss代码规范
+
+package.json文件
+```js
+"devDependencies": {
+    ...
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.3",
+    "postcss": "^8.4.16",
+    "postcss-html": "^1.5.0",
+    "postcss-pxtorem": "^6.0.0",
+    "postcss-scss": "^4.0.4",
+  }
+```
+项目根目录新增
+.stylelintrc.json文件
+```js
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order",
+    "stylelint-config-standard-vue/scss",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "ignorePartialSupport": true
+      }
+    ],
+    "selector-class-pattern": "^(([a-z][a-z0-9]*)(-[a-z0-9]+)*)|(van-[a-z0-9]*(_[a-z0-9]*)?)$"
+  }
+}
+```
+.stylelintignore文件
+```js
+# 忽略文件
+node_modules
+.idea
+# 旧的不需打包的样式库
+*.min.css
+​
+# 其他类型文件
+*.js
+*.jpg
+*.woff
+​
+# 测试和打包目录
+/test/
+/dist/
+```
